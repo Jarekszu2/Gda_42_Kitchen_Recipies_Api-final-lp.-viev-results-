@@ -81,21 +81,6 @@ public class ScannerContentLoader {
         parameters.setPageNumber(number);
     }
 
-    public char decisionIfMoreRecipies() {
-        System.out.println("Czy wybrałas/eś przepis - naciśnij 't', czy chcesz zobaczyć kolejną stronę - naciśnij 's':");
-        char znak = 'a';
-        boolean flag = false;
-        do {
-            znak = scanner.next().charAt(0);
-            if (znak != 't' && znak != 's') {
-                getString("'t' lub 's'");
-            } else {
-                flag = true;
-            }
-        } while (!flag);
-        return znak;
-    }
-
     public char choice() {
         System.out.println();
         System.out.println("Dokonaj wyboru:" +
@@ -105,7 +90,6 @@ public class ScannerContentLoader {
         boolean flag = false;
         char znak = 'a';
         do {
-//            System.out.println();
             znak = scanner.next().charAt(0);
             if (znak == 't' || znak == 'n' || znak == 's') {
                 flag = true;
@@ -113,7 +97,6 @@ public class ScannerContentLoader {
                 System.out.println("Dokonaj poprawnego wyboru!");
             }
         } while (!flag);
-//        System.out.println(znak);
         return znak;
     }
 

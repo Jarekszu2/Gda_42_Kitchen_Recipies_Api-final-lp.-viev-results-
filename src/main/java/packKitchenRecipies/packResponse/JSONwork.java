@@ -12,11 +12,12 @@ public class JSONwork {
     public final static Gson GSON = new Gson();
 
     public Response getResponseByInputStream(String urlQuestion) {
+        System.out.println(urlQuestion);
         Response response = null;
         try {
             URL url = new URL(urlQuestion);
-//            InputStream inputStream = url.openStream();
-            response = GSON.fromJson(new InputStreamReader(url.openStream()), Response.class);
+            InputStream inputStream = url.openStream();
+            response = GSON.fromJson(new InputStreamReader(inputStream), Response.class);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {

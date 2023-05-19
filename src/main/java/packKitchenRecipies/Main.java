@@ -42,7 +42,7 @@ public class Main {
             znak = scannerContentLoader.choice();
             switch (znak) {
                 case 'n':
-                    // ściagam z API nową stronę i dodaje do mapy wyników
+                    // ściagam z API Nową stronę i dodaje do mapy wyników
                     boolean flagA = false;
                     do {
                         System.out.println();
@@ -63,7 +63,7 @@ public class Main {
                     } while (!flagA);
                     break;
                 case 's':
-                    // przeglądam zapisane strony z przepisami kulinarnymi
+                    // przeglądam zapisane Strony z przepisami kulinarnymi
                     responseStore.vievSetOfAvailableRecipiesPages();
                     int pageNumber = scannerContentLoader.choisePageNumberFromMap(responseStore);
                     responseStore.vievResults(urlQuestionParameters, pageNumber);
